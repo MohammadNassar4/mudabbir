@@ -1,0 +1,30 @@
+/* ? normalization */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;box-sizing: border-box;
+}
+
+:root {
+  --main-text-color: #101828;
+  --accent-text-color: #4a5565;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic";
+  background-color: #F9FAFB;
+}
