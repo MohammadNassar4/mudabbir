@@ -673,7 +673,7 @@ main section.content {
 
         p {
           font-size: 12px;
-          font-emphasize: 600px;
+          font-weight: 600px;
           line-height: 18px;
           color: #64748b;
         }
