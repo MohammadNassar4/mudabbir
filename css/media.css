@@ -1,0 +1,245 @@
+@media screen and (max-width: 1279px) {
+  .lg-hide {
+    display: none;
+  }
+
+  aside {
+    padding: 12px;
+    width: fit-content;
+
+    & .logo {
+      width: 40px;
+      height: 40px;
+
+      & i {
+        font-size: 16px;
+      }
+    }
+
+    & nav li {
+      width: fit-content;
+      padding: 12px 8px;
+    }
+
+    & .action li {
+      padding: 8px 0;
+    }
+  }
+
+  main {
+    margin-right: 64px;
+  }
+
+  main section.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    grid-template-areas:
+      "activities   income-outcome"
+      "transactions transactions"
+      "transactions transactions"
+      "bills        account-summary"
+      "overview     payment-methods"
+      "overview     payment-methods"
+    ;
+
+    .title {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+/* ?=================================== */
+@media screen and (max-width: 1023px) {
+  .summary {
+
+    .card {
+
+      .content {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  /* ? account-summary card */
+  .account-summary {
+    .content {
+      >div {
+        flex-direction: column;
+        
+        >div {
+          align-self: start;
+        }
+
+        .amount {
+          align-self: end;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 766px) {
+  .md-hide {
+    display: none;
+  }
+
+  .md-p-16 {
+    padding: 16px;
+  }
+
+  /* ? main section */
+  main {
+    margin: 0;
+    padding: 16px 16px 32px 16px;
+
+    & header .logo {
+      width: 48px;
+      height: 48px;
+
+      & i {
+        font-size: 18px;
+      }
+    }
+
+    /* ? header section */
+    & header {
+      margin-bottom: 24px;
+
+      & .right {
+        gap: 12px;
+      }
+
+      & h1 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      & .desc {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      & .status {
+        padding: 4px 8px;
+
+        & span {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+
+      & .left {
+        gap: 8px;
+
+        & .icon {
+          width: 32px;
+          height: 32px;
+
+          & i {
+            font-size: 14px;
+          }
+        }
+
+        & .user {
+          padding: 8px 12px;
+
+          & .user-pic {
+            width: 32px;
+          }
+
+          & .user-info .user-name {
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ? summary section */
+  .summary {
+    grid-template-columns: 1fr;
+
+    .card {
+
+      .content {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+  }
+
+    main section.content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      grid-template-areas:
+        "activities"
+        "transactions"
+        "bills"
+        "overview"
+        "income-outcome"
+        "account-summary"
+        "payment-methods"
+      ;
+  
+      .title {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    /* ? account-summary card */
+            .account-summary {
+              .content {
+                >div {
+                  flex-direction: row;
+      
+                  >div {
+                    align-self: center;
+                  }
+      
+                  .amount {
+                    align-self: center;
+                  }
+                }
+              }
+            }
+}
+
+@media screen and (max-width: 639px) {
+  main header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+
+    & .status {
+      display: none;
+    }
+
+    >.status-2 {
+      align-self: stretch;
+      font-size: 12px;
+      padding: 6px 12px;
+      display: flex;
+      justify-content: center;
+    }
+
+    & .left {
+      width: 100%;
+      justify-content: space-between;
+
+      & .user {
+        gap: 0;
+
+        .user-info .user-name {
+          display: none;
+        }
+      }
+    }
+  }
+}
