@@ -68,7 +68,7 @@
     .content {
       >div {
         flex-direction: column;
-        
+
         >div {
           align-self: start;
         }
@@ -173,42 +173,68 @@
     }
   }
 
-    main section.content {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      grid-template-areas:
-        "activities"
-        "transactions"
-        "bills"
-        "overview"
-        "income-outcome"
-        "account-summary"
-        "payment-methods"
-      ;
-  
-      .title {
-        font-size: 18px;
-        line-height: 28px;
+  main section.content {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 16px;
+    grid-template-areas:
+      "activities"
+      "transactions"
+      "bills"
+      "overview"
+      "income-outcome"
+      "account-summary"
+      "payment-methods"
+    ;
+
+    .title {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  /* ? account-summary card */
+  .account-summary {
+    .content {
+      >div {
+        flex-direction: row;
+
+        >div {
+          align-self: center;
+        }
+
+        .amount {
+          align-self: center;
+        }
       }
     }
+  }
 
-    /* ? account-summary card */
-            .account-summary {
-              .content {
-                >div {
-                  flex-direction: row;
-      
-                  >div {
-                    align-self: center;
-                  }
-      
-                  .amount {
-                    align-self: center;
-                  }
-                }
-              }
-            }
+  /* ? transactions card */
+  main section.content .transactions {
+    min-width: 0px;
+
+    .title {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .see-more {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    .table-container {
+      table {
+        font-size: 12px;
+        line-height: 16px;
+
+        thead tr th,
+        tbody tr td {
+          padding: 8px 4px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 639px) {
